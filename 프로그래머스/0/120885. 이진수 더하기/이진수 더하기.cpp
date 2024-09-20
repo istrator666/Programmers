@@ -11,7 +11,7 @@ string solution(string bin1, string bin2) {
     int ibin2 = stoi(bin2, nullptr, 2);
     int sum = ibin1 + ibin2;
     
-if (sum == 0) 
+    if (sum == 0) 
     {
         return "0";
     }
