@@ -1,25 +1,22 @@
 #include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
 int solution(int a, int b) {
     int answer = 0;
-    int gdc_val = __gcd(a,b);
-    int reduce_denominator = b / gdc_val;
-    
-    while(reduce_denominator % 2 == 0)
+
+    while (b % 2 == 0)
     {
-        reduce_denominator /= 2;
+        b /= 2;
     }
     
-    while(reduce_denominator % 5 == 0)
+    while (b % 5 == 0)
     {
-        reduce_denominator /= 5;
+        b /= 5;
     }
     
-    if (reduce_denominator == 1)
+    if (a % b == 0)
     {
         answer = 1;
     }
@@ -27,6 +24,7 @@ int solution(int a, int b) {
     {
         answer = 2;
     }
+    
     
     return answer;
 }
