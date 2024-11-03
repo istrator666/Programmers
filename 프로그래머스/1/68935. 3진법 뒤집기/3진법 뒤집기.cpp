@@ -10,7 +10,7 @@ int solution(int n) {
     
     while (n)
     {
-        v.push_back(n%3);
+        v.push_back(n % 3);
         n /= 3;
     }
     
